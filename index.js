@@ -17,3 +17,12 @@ const path = `./${selectedLanguage}.js`;
 const { greet } = await import(path);
 
 console.log(greet);
+
+//file module
+console.log(import.meta.resolve(path))
+
+//node core modules
+console.log(import.meta.resolve("fs"))
+
+//3rd party
+console.log(import.meta.resolve("express"))
